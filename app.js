@@ -1,5 +1,6 @@
-import { setup, allToDos, saveToDo } from "./utils/filestorage";
+import { setup, allToDos, saveToDo } from "./utils/filestorage.js";
 import express from "express";
+import cors from "cors";
 
 const PORT = 9995;
 const app = express();
@@ -16,13 +17,13 @@ app.use(
 
 //! GET -Route to read all todos
 
-app.get("/api/todos.json", (req, res) => {
+app.get("/api/todos", (req, res) => {
   allToDos().then((todos) => res.json(todos));
 });
 
 //!POST -Route to add one todo
 
-app.put("/api/todos.json", (req, res) => {
+app.post("/api/todos", (req, res) => {
   const todo = req.body;
   console.log(todo);
   res.send();
