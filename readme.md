@@ -10,8 +10,14 @@ Express App:
 
 - create .gitignore and write this inside:
 
+```
+
 node_modules/
+
 .vscode/
+
+
+```
 
 - create your app file, for example app.js
 
