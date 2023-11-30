@@ -5,7 +5,7 @@ import fs from "fs/promises";
 export const setup = () => {
   fs.access("./todos.json")
     .then((data) => console.log(data))
-    .catch((err) => fs.writeFile("./planes.json", "[]"));
+    .catch((err) => fs.writeFile("./todos.json", "[]"));
 };
 
 //# alle Todos anzeigen

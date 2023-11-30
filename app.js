@@ -26,6 +26,7 @@ app.get("/api/todos", (req, res) => {
 app.post("/api/todos", (req, res) => {
   const todo = req.body;
   console.log(todo);
+  saveToDo(todo);
   res.send();
 });
 
