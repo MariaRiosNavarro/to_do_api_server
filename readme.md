@@ -38,6 +38,8 @@ node --watch app.js
 
 ```
 
+- if you need handle ![cors](https://www.npmjs.com/package/cors): npm i cors
+
 - for repository :
 
 ```javascript
