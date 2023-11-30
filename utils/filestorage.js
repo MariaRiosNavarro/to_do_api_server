@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 
-//#json herstellen
+//#make json
 
 export const setup = () => {
   fs.access("./todos.json")
@@ -27,3 +27,5 @@ export const saveToDo = (todo) => {
     })
     .then((array) => fs.writeFile("./todos.json", JSON.stringify(array)));
 };
+
+// # 1 Todo mit bestimmten kriterien ausgeben (done, category & priority)

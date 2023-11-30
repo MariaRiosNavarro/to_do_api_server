@@ -23,6 +23,11 @@ node_modules/
 
 node app.js
 
+```
+
+or
+
+```javascript
 
 node --watch app.js
 
@@ -31,6 +36,8 @@ node --watch app.js
 
 - for repository :
 
+```javascript
+
 git init
 
 git status
@@ -38,3 +45,5 @@ git status
 git add .
 
 git commit -m "first commit"
+
+```
