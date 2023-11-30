@@ -38,7 +38,7 @@ node --watch app.js
 
 ```
 
-- if you need handle ![cors](https://www.npmjs.com/package/cors): npm i cors
+- if you need handle [cors](https://www.npmjs.com/package/cors): npm i cors
 
 - dont forget! imports of files need the file end, for example:
 
