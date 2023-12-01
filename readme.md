@@ -88,11 +88,10 @@ app.use(
 
 - DONT FORGET to add in .gitignore:
 
-````
+```
 .env
 
-``
-
+```
 
 ### for repository :
 
@@ -106,4 +105,4 @@ git add .
 
 git commit -m "first commit"
 
-````
+```
