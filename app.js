@@ -45,7 +45,7 @@ app.post("/api/todos", (req, res) => {
 app.delete("/api/todos", (req, res) => {
   const id = req.body.id;
   deleteToDo(id)
-    .then(() => res.json({ message: "Plane deleted successfully" }))
+    .then(() => res.json({ message: "ToDo deleted successfully" }))
     .catch((err) => res.status(500).end(err));
 });
 
