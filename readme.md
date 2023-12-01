@@ -53,6 +53,43 @@ import express from "express";
 import cors from "cors";
 ```
 
+### to protect your keys use dotenv
+
+````
+npm install dotenv
+
+```
+
+_  And create a .env file in your root with :
+
+````
+
+PORT=yourPort
+CORS_ORIGIN=http://localhost:yourPort
+DATABASE_PASSWORD=yourPassword
+
+```
+
+- You can use this variables in your App for example like (dont forget import & config!!):
+
+```
+
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const PORT = process.env.PORT
+
+app.use(
+cors({
+origin: process.env.CORS_ORIGIN,
+})
+);
+
+````
+
+
+
 - for repository :
 
 ```javascript
@@ -65,4 +102,4 @@ git add .
 
 git commit -m "first commit"
 
-```
+````

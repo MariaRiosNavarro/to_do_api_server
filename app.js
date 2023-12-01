@@ -1,8 +1,11 @@
 import { setup, allToDos, saveToDo } from "./utils/filestorage.js";
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
 
-const PORT = 9995;
+dotenv.config();
+
+const PORT = process.env.PORT || 9995;
 const app = express();
 
 setup();
@@ -11,7 +14,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CORS_ORIGIN,
   })
 );
 
