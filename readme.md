@@ -55,14 +55,14 @@ import cors from "cors";
 
 ### to protect your keys use dotenv
 
-````
+```javascript
 npm install dotenv
 
 ```
 
-_  And create a .env file in your root with :
+- And create a .env file in your root with :
 
-````
+```javascript
 
 PORT=yourPort
 CORS_ORIGIN=http://localhost:yourPort
@@ -86,11 +86,9 @@ origin: process.env.CORS_ORIGIN,
 })
 );
 
-````
+```
 
-
-
-- for repository :
+### for repository :
 
 ```javascript
 
@@ -102,4 +100,4 @@ git add .
 
 git commit -m "first commit"
 
-````
+```
