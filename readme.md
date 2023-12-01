@@ -46,7 +46,7 @@ node --watch app.js
 import { setup } from "./utils/filestorage.js";
 ```
 
-- dont forget! : **_imports are not automatic_** like React, you must add it manually. For example:
+- dont forget! : **imports are not automatic** like React, you must add it manually. For example:
 
 ```javascript
 import express from "express";
