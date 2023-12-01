@@ -1,4 +1,4 @@
-import { setup, allToDos, saveToDo } from "./utils/filestorage.js";
+import { setup, getAllToDos, saveToDo } from "./utils/filestorage.js";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -21,7 +21,9 @@ app.use(
 //! GET -Route to read all todos
 
 app.get("/api/todos", (req, res) => {
-  allToDos().then((todos) => res.json(todos));
+  getAllToDos()
+    .then((todos) => res.json(todos))
+    .catch(() => res.status(500).end());
 });
 
 //!POST -Route to add one todo

@@ -53,6 +53,31 @@ import express from "express";
 import cors from "cors";
 ```
 
+### to handle id use
+
+```javascript
+
+npm i uuid
+
+```
+
+- for example:
+
+```javascript
+import { v4 } from "uuid";
+
+export const saveToDo = (
+  todo = {
+    todo: "do something",
+    priority: "normal",
+    category: "personal",
+  }
+) => {
+  todo.id = v4();
+  fs.writeFile("./todos/" + todo.id, JSON.stringify(todo));
+};
+```
+
 ### to protect your keys use dotenv
 
 ```javascript
