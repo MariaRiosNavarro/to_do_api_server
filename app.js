@@ -1,4 +1,9 @@
-import { setup, getAllToDos, saveToDo } from "./utils/filestorage.js";
+import {
+  setup,
+  getAllToDos,
+  saveToDo,
+  deleteToDo,
+} from "./utils/filestorage.js";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -30,9 +35,18 @@ app.get("/api/todos", (req, res) => {
 
 app.post("/api/todos", (req, res) => {
   const todo = req.body;
-  console.log(todo);
   saveToDo(todo);
+  console.log(todo);
   res.send();
+});
+
+//!DELETE - Route to delete
+
+app.delete("/api/todos", (req, res) => {
+  const id = req.body.id;
+  deleteToDo(id)
+    .then(() => res.json({ message: "Plane deleted successfully" }))
+    .catch((err) => res.status(500).end(err));
 });
 
 //#LISTEN
