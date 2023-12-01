@@ -72,20 +72,18 @@ DATABASE_PASSWORD=yourPassword
 
 - You can use this variables in your App for example like (dont forget import & config!!):
 
-```
-
+```javascript
 import dotenv from "dotenv";
 
 dotenv.config();
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 
 app.use(
-cors({
-origin: process.env.CORS_ORIGIN,
-})
+  cors({
+    origin: process.env.CORS_ORIGIN,
+  })
 );
-
 ```
 
 ### for repository :
